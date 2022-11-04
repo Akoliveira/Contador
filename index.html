@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 100vh;
+            background: black;
+            color: white; 
+            display: grid;
+            place-items: center;  
+        }
+        section{
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center  ;
+        }
+        p{
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Contador</h1>
+        <p>0</p>
+        <button onclick="aumentar()">mais</button>
+        <button onclick="diminuir()">menos</button>
+    </section>
+    <script>
+        //estado da aplicação
+        
+        let numero = 0
+
+        //alteradores do estado da aplicação
+
+        function aumentar() {
+            numero++
+            console.log(numero)
+            atttela()
+        }
+        function diminuir() {
+            numero--
+            console.log(numero)
+            atttela()
+        }
+
+        //atualizar o estado da aplicação na tela
+
+        function atttela() {
+            const p = document.querySelector("p")
+            p.innerText = numero
+        }
+
+        //iniciar 
+
+        atttela()
+      
+    </script>
+</body>
+</html>
