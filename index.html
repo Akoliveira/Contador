@@ -1,39 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icones/ao.ico">
     <title>Contador</title>
     <style>
-        *{
+        @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+       * {
+         box-sizing:border-box;
+         margin: 0px;
+         padding: 0px;
+         font-family: 'Didact Gothic', sans-serif;
+         font-style: none;
+        }
+
+        header {
             margin: 0;
-            box-sizing: border-box;
+            width: 100%;
+            background: rgba( 255, 255, 255, 0.35 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 13.5px );
+            -webkit-backdrop-filter: blur( 13.5px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
         }
-        body{
+
+        .logo {
+            height: 80px;
+        }
+
+        div ul {
+            color: white;
+            list-style: none;
+            display: flex;
+        }
+
+        div li {
+            margin: 0px 15px;
+            font-size: 20px;
+        }
+
+        body {
+            margin: 0px;
             min-height: 100vh;
-            background: black;
-            color: white; 
+            background: no-repeat center/cover url(images/circuit.jpg);
             display: grid;
-            place-items: center;  
+            place-items: center;
         }
-        section{
-            background: rgba(255, 255, 255, 0.2);
-            padding: 20px;
-            border-radius: 5px;
-            text-align: center  ;
+
+        .title1 {
+            max-width: 400px;
+            font-size: 50px;
         }
-        p{
+
+        .desc {
+            max-width: 400px;
+            text-align: center;
+        }
+
+        section {
+            background: round rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-style: ridge;
+            border-color: black;
+            border-radius: 30px;
+            text-align: center;
+        }
+
+        .count {
             font-size: 100px;
+            color: #000000;
         }
+        .aumen {
+            background: rgb(166, 199, 243);
+            border-style: ridge;
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+        .dimin {
+            background: rgb(166, 199, 243);
+            border-style: ridge;
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+        
+        /*RESPONSIVIDADE*/
+
+        /* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+}
+
+        /* Landscape phones and down */
+@media (max-width: 480px) {
+}
+        
     </style>
 </head>
 <body>
+    <header> 
+        <img class="logo" src="images/logo.png" alt="logo">     
+        <div>
+            <ul>
+                <li><a href="teste"></a>Contador</li>
+                <li><a href="teste2"></a>Task List</li>
+                <li><a href="teste3"></a>Calculadora</li>
+                <li><a href="teste4"></a>Social</li>
+                <li><a href="teste5"></a>Contato</li>
+            </ul>
+        </div>
+    </header>
+    <h1 class="title1">Contador</h1>
+    <h2 class="desc">Desafio da escola <abbr title="Escola de Lideres em Tecnologia da Informação">Eliti</abbr> para desenvolver um contador com incremento e decremento utilizando <abbr title="Hyper Text Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> e JavaScript.</h2>
     <section>
-        <h1>Contador</h1>
-        <p>0</p>
-        <button onclick="aumentar()">mais</button>
-        <button onclick="diminuir()">menos</button>
+        <h1><strong>Contador</strong></h1>
+        <p class="count">0</p>
+        <button class="aumen" onclick="aumentar()">Mais</button>
+        <button class="dimin" onclick="diminuir()">Menos</button>
     </section>
     <script>
         //estado da aplicação
